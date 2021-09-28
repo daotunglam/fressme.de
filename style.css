@@ -1,0 +1,426 @@
+:root {
+    --basket-width-desktop: 344px;
+    --toolbar-height-desktop: 72px;
+    --logo_img_container-width: 130px;
+    --margin_left_right: 40px;
+    --main_color: #FF8800;
+    --footer_color: #0A3847;
+}
+
+.d-none {
+    display: none;
+}
+
+.invisible{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0a3847;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+/*
+* HEADER TOOLBAR
+*/
+
+.toolbar {
+    background-color: var(--main_color);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0 20px;
+    height: var(--toolbar-height-desktop);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.website_logo{
+    width: 40px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+/*
+* MAIN
+*/
+
+main {
+    position: relative;
+    display: flex;
+}
+
+/*
+* MAIN CONTENT
+*/
+
+#main_content {
+    width: calc(100vw - var(--basket-width-desktop));
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* RESTAURANT LOGO
+*/
+
+.restaurant_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restaurant_logo_backgroundImg {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.logo_img_container {
+    border: 1px solid #d7d7d7;
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    margin-top: -66px;
+    background-color: white;
+}
+
+.logo_img_container img {
+    object-fit: contain;
+    width: 86px;
+}
+
+/*
+* RESTAURANT MENU
+*/
+
+.restaurant_menu {
+    margin-top: -64px;
+}
+
+/*
+* RESTAURANT NOTIFICATION
+*/
+
+.restaurant_notification {
+    position: relative;
+    margin: 20px var(--margin_left_right);
+}
+
+.restaurant_name h1 {
+    width: calc(50% - 0.5*var(--logo_img_container-width) - var(--margin_left_right));
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.review_rating {
+    margin: 0;
+    font-size: 13px;
+    color: var(--main_color);
+}
+
+.restaurant_info {
+    width: calc(100% - 150px);
+    font-size: 13px;
+}
+
+.info_and_fav {
+    border: 1px solid #ebebeb;
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 2px;
+}
+
+.info_icon {
+    background-image: url("https://www.lieferando.de/assets/images/icons/ic_info.svg");
+    background-repeat: no-repeat;
+    background-size: 5px 17px;
+    background-position: 50% 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-right: 1px solid #ebebeb;
+    background-color: white;
+}
+
+.heart_icon {
+    background-image: url("https://www.lieferando.de/assets/images/icons/ic_empty_fav.svg");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: 50% 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: white;
+}
+
+/*
+* MEAL GROUP NAV
+*/
+
+.meal_group_nav {
+    background-color: #f8f5f2;
+    padding: 10px var(--margin_left_right);
+    margin: 50px 0 20px;
+    position: -webkit-sticky;
+    /*for Safari*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    /*makes meal_container sroll under meal_group_name*/
+}
+
+.meal_group_nav a {
+    text-decoration: none;
+    color: #0a3847;
+    margin: 0 var(--margin_left_right);
+}
+
+.meal_group_nav button {
+    border: none;
+    /* background-color: transparent; */
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 0;
+}
+
+/*
+* MEAL
+*/
+
+.meal {
+    margin: 0 var(--margin_left_right);
+}
+
+.meal_group_name {
+    background-color: #f8f5f2;
+    padding: 5px var(--margin_left_right);
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+.meal_container {
+    margin: 5px 0;
+    border-radius: 0 2px 0 0;
+}
+
+.meal_basic {
+    position: relative;
+    height: 200px;
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.meal_name {
+    position: absolute;
+    left: var(--margin_left_right);
+}
+
+.meal_price {
+    position: absolute;
+    left: var(--margin_left_right);
+    bottom: 30px;
+    color: var(--main_color);
+}
+
+.meal_img_container {
+    width: 200px;
+    height: 100%;
+    margin-right: 42px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.meal_img_container img {
+    width: 60%;
+    object-fit: contain;
+}
+
+.meal_basic button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-left: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    background-color: transparent;
+    border-radius: 0 2px 0 0;
+    color: #1574f5;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*
+* IMPRINT
+*/
+
+.imprint {
+    margin: 0 var(--margin_left_right);
+}
+
+/*
+* BASKET CONTAINER
+*/
+#closeBasketButton{
+    display: none;
+}
+#basket_container {
+    width: var(--basket-width-desktop);
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 30%);
+    text-align: center;
+    position: -webkit-sticky;
+    /*for Safari*/
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    /*ohne dieses rollt der Basket 20px Padding weiter nach oben.*/
+    padding: 10px;
+    z-index: 1;
+}
+
+#cantOrderWarning {
+    font-size: 13px;
+    color: black;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+    margin: 30px 0;
+}
+
+#generateBasketMeals {
+    display: flex;
+    flex-direction: column;
+}
+
+#generateBasketMeals>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.basketMealName {
+    width: 100px;
+}
+
+.basketMealPrice {
+    width: 40px;
+}
+
+#generateBasketMeals>div span {
+    font-size: 13px;
+}
+
+#generateBasketMeals>div button {
+    font-size: 13px;
+    height: 24px;
+    margin: 0 2px;
+}
+
+.basketEditButtons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#sumCalc>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*
+* BASKET CONTAINER BAR
+*/
+
+#basket_container_bar{
+    display: none;
+}
+
+/*
+* FOOTER
+*/
+
+footer {
+    height: 150px;
+    background-color: var(--footer_color);
+}
+
+/*
+* RESPONSIVE
+*/
+@media (max-width: 1024px) {
+    #basket_container{
+        display: none;
+    }
+    #basket_container_bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #1574f5;
+        position:fixed;
+        /* top: calc(100vh - 60px); */
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        cursor: pointer;
+        z-index: 3;
+    }
+    #basket_container_bar > h2, #basket_container_bar > span {
+        color: white;
+    }
+    #main_content{
+        width: 100%;
+    }
+    .basketFullDisplay{
+        
+    }
+}

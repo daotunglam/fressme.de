@@ -199,10 +199,9 @@ main {
 
 .meal_group_nav {
     background-color: #f8f5f2;
-    padding: 10px var(--margin_left_right);
+    padding: 20px var(--margin_left_right);
     margin: 50px 0 20px;
-    position: -webkit-sticky;
-    /*for Safari*/
+    position: -webkit-sticky; /*for Safari*/
     position: sticky;
     top: 0;
     z-index: 1;
@@ -212,16 +211,27 @@ main {
 .meal_group_nav a {
     text-decoration: none;
     color: #0a3847;
-    margin: 0 var(--margin_left_right);
+    padding: 20px;
+    /* margin: 0 var(--margin_left_right); */
+    border-radius: 4px;
 }
 
 .meal_group_nav button {
     border: none;
-    /* background-color: transparent; */
+    background-color: transparent;
     font-size: 20px;
     cursor: pointer;
-    padding: 20px;
-    margin: 0;
+    padding: 16px;
+    /* margin: 0; */
+    border-radius: 4px;
+    position: absolute;
+    top: 5px;
+    right: 50px;
+}
+
+.meal_group_nav a:hover, .meal_group_nav button:hover{
+    background-color: gray;
+    color: white;
 }
 
 /*

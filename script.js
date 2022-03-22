@@ -234,7 +234,7 @@ function renderCost() {
 
     document.getElementById('sumCalc').innerHTML = `
         <div>
-            <span><b>Zwischensumme</b></span> <span id="sum"><b>${sumCost}€</b></span>
+            <span><b>Zwischensumme</b></span> <span id="sum"><b>${germanNrFormat(sumCost)}€</b></span>
         </div>
         <div>
             <span>Lieferkosten</span> <span id="deliveryCost">${deliveryCost}€</span>

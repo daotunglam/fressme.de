@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "X-tra Long Chili Cheese",
+        "price": 9.90,
+        "imgUrl": "https://c.pxhere.com/photos/dc/8d/appetite_beef_big_bread_bun_burger_calories_cheese-819460.jpg!d",
+        "categories": ["Beliebte Gerichte"],
+        "inBasket": 0
+    },
+    {
+        "id": 2,
+        "name": "Crispy Chicken",
+        "price": 7.60,
+        "imgUrl": "https://c.pxhere.com/photos/db/8d/abstract_barbeque_bbq_beauty_beef_bread_bun_burger-1048626.jpg!d",
+        "categories": ["Beliebte Gerichte"],
+        "inBasket": 0
+    },
+    {
+        "id": 3,
+        "name": "Sweet Chicken",
+        "price": 6.90,
+        "imgUrl": "https://c.pxhere.com/photos/e7/8e/cheeseburger_hamburger_cheese_pickles_american_sesame_seed_bun_onion-773274.jpg!d" ,
+        "categories": ["Beliebte Gerichte"],
+        "inBasket": 0
+    },
+    {
+        "id": 4,
+        "name": "Hot Chili Lover Beef Menü",
+        "price": 10.20,
+        "imgUrl": "img/Hot-Chili-Lover-Beef-Menü.jpg",
+        "categories": [ "Specials"],
+        "inBasket": 0
+    },
+    {
+        "id": 5,
+        "name": "Dinner for 2 Bundle",
+        "price": 12.50,
+        "imgUrl": "img/dinner-for-2-bundle.jpg",
+        "categories": [ "Specials"],
+        "inBasket": 0
+    },
+    {
+        "id": 6,
+        "name": "Breakfirst for 2 Bundle",
+        "price": 7.80,
+        "imgUrl": "https://c.pxhere.com/photos/56/4a/hamburger_burger_fast_food_unhealthy_eat_lunch_meat_fat-1387336.jpg!d",
+        "categories": [ "Specials"],
+        "inBasket": 0
+    }
+]

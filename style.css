@@ -24,24 +24,16 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
     color: #666;
     font-size: 16px;
     line-height: 1.5;
     background-color: #fff;
     text-align: left;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #0a3847;
-}
-
-h1 {
-    font-size: 26px;
-}
-
-h2 {
-    font-size: 18px;
 }
 
 /*
@@ -193,92 +185,25 @@ main {
     background-color: white;
 }
 
-/*
-* MEAL GROUP NAV
-*/
-
-.meal_group_nav {
-    background-color: #f8f5f2;
-    padding: 20px var(--margin_left_right);
-    margin: 50px 0 20px;
-    position: -webkit-sticky; /*for Safari*/
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    /*makes meal_container sroll under meal_group_name*/
-}
-
-.meal_group_nav a {
-    text-decoration: none;
-    color: #0a3847;
-    padding: 20px;
-    /* margin: 0 var(--margin_left_right); */
-    border-radius: 4px;
-}
-
-.meal_group_nav button {
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 16px;
-    /* margin: 0; */
-    border-radius: 4px;
-    position: absolute;
-    top: 5px;
-    right: 50px;
-}
-
-.meal_group_nav a:hover, .meal_group_nav button:hover{
-    background-color: gray;
-    color: white;
-}
 
 /*
-* MEAL
+* MEALS
 */
 
-.meal {
+#meals {
     margin: 0 var(--margin_left_right);
 }
 
 .meal_group_name {
     background-color: #f8f5f2;
-    padding: 5px var(--margin_left_right);
-    margin: 5px 0;
-    border-radius: 2px;
+    margin-top: 3rem;
+    padding: 1rem;
 }
 
-.meal_container {
-    margin: 5px 0;
-    border-radius: 0 2px 0 0;
-}
-
-.meal_basic {
-    position: relative;
-    height: 200px;
-    border: 1px solid #ebebeb;
-    border-radius: 2px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.meal_name {
-    position: absolute;
-    left: var(--margin_left_right);
-}
-
-.meal_price {
-    position: absolute;
-    left: var(--margin_left_right);
-    bottom: 30px;
-    color: var(--main_color);
-}
 
 .meal_img_container {
     width: 200px;
     height: 100%;
-    margin-right: 42px;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -289,28 +214,12 @@ main {
     object-fit: contain;
 }
 
-.meal_basic button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-left: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
-    background-color: transparent;
-    border-radius: 0 2px 0 0;
-    color: #1574f5;
-    font-size: 30px;
-    cursor: pointer;
-}
-
 /*
 * IMPRINT
 */
 
 .imprint {
-    margin: 0 var(--margin_left_right);
+    margin: 3rem var(--margin_left_right);
 }
 
 /*
@@ -345,12 +254,12 @@ hr {
     margin: 30px 0;
 }
 
-#generateBasketMeals {
+#basketMeals {
     display: flex;
     flex-direction: column;
 }
 
-#generateBasketMeals>div {
+#basketMeals>div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -365,14 +274,8 @@ hr {
     width: 40px;
 }
 
-#generateBasketMeals>div span {
+#basketMeals>div span {
     font-size: 13px;
-}
-
-#generateBasketMeals>div button {
-    font-size: 13px;
-    height: 24px;
-    margin: 0 2px;
 }
 
 .basketEditButtons {
@@ -429,8 +332,5 @@ footer {
     }
     #main_content{
         width: 100%;
-    }
-    .basketFullDisplay{
-        
     }
 }

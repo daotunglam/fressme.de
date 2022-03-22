@@ -6,12 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fressmich (Lam)</title>
+
+    <!-- BOOTSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- BOOTSTRAP 5 -->
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/792b9e6aab.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="renderMeals()" data-bs-spy="scroll" data-bs-target="#meal_group_nav">
     <header class="toolbar">
         <a href="#">
             <img class="website_logo" src="img/restaurant-256.jpg">
@@ -19,8 +29,8 @@
         </a>
         <a>Maistraße, München</a>
         <div>
-            <i class="fas fa-globe-europe"></i> 
-            <i class="fas fa-bars"></i>      
+            <i class="fas fa-globe-europe"></i>
+            <i class="fas fa-bars"></i>
         </div>
     </header>
 
@@ -54,117 +64,37 @@
                     <p class="restaurant_info">Informationen zu den enthaltenen Allergenen und Zusatzstoffen finden Sie
                         unter dem Info-Button (i)</p>
                     <div class="info_and_fav">
-                        <button class="info_icon"></button>
-                        <button class="heart_icon"></button>
+                        <span class="info_icon"></span>
+                        <span class="heart_icon"></span>
                     </div>
                 </div>
-                <div class="meal_group_nav">
-                    <i class="fas fa-search"></i>
-                    <a href="#beliebteGerichte">Beliebte Gerichte</a>
-                    <a href="#specials">Specials</a>
-                    <button><i class="fas fa-chevron-right"></i></button>
-                </div>
-                <div class="meal">
-                    <div class="meal_group_name" id="beliebteGerichte">
-                        <h2>Beliebte Gerichte</h2>
-                    </div>
-                    <div class="meal_container">
-                        <div class="meal_basic">
-                            <h2 class="meal_name">X-tra Long Chili Cheese</h2>
-                            <h2 class="meal_price">5,99€</h2>
-                            <div class="meal_img_container">
-                                <img src="https://c.pxhere.com/photos/dc/8d/appetite_beef_big_bread_bun_burger_calories_cheese-819460.jpg!d">
-                            </div>
-                            <button onclick="addToBasket(0)">+</button>
-                            <!-- <button class="d-none">×</button> -->
-                        </div>
-                        <!-- <div class="meal_extra d-none">
-                            <input type="number" name="" id="numberOfMeal">
-                            <button type="submit">5,99€</button>
-                        </div> -->
-                    </div>
-                    <div class="meal_container">
-                        <div class="meal_basic">
-                            <h2 class="meal_name">Crispy Chicken</h2>
-                            <h2 class="meal_price">4,99€</h2>
-                            <div class="meal_img_container">
-                                <img src="https://c.pxhere.com/photos/db/8d/abstract_barbeque_bbq_beauty_beef_bread_bun_burger-1048626.jpg!d">
-                            </div>
-                            <button onclick="addToBasket(1)">+</button>
-                            <!-- <button class="d-none">×</button> -->
-                        </div>
-                        <!-- <div class="meal_extra d-none">
-                            <input type="number" name="" id="numberOfMeal">
-                            <button type="submit">4,99€</button>
-                        </div> -->
-                    </div>
-                    <div class="meal_container">
-                        <div class="meal_basic">
-                            <h2 class="meal_name">Sweet Chicken</h2>
-                            <h2 class="meal_price">4,99€</h2>
-                            <div class="meal_img_container">
-                                <img src="https://c.pxhere.com/photos/e7/8e/cheeseburger_hamburger_cheese_pickles_american_sesame_seed_bun_onion-773274.jpg!d">
-                            </div>
-                            <button onclick="addToBasket(2)">+</button>
-                            <!-- <button class="d-none">×</button> -->
-                        </div>
-                        <!-- <div class="meal_extra d-none">
-                            <input type="number" name="" id="numberOfMeal">
-                            <button type="submit">4,99€</button>
-                        </div> -->
-                    </div>
-                    <div class="meal_group_name" id="specials">
-                        <h2>Specials</h2>
-                    </div>
-                    <div class="meal_container">
-                        <div class="meal_basic">
-                            <h2 class="meal_name">Hot Chili Lover Beef Menü</h2>
-                            <h2 class="meal_price">9.99€</h2>
-                            <div class="meal_img_container">
-                                <img src="img/Hot-Chili-Lover-Beef-Menü.jpg">
-                            </div>
-                            <button onclick="addToBasket(3)">+</button>
-                            <!-- <button class="d-none">×</button> -->
-                        </div>
-                        <!-- <div class="meal_extra d-none">
-                            <input type="number" name="" id="numberOfMeal">
-                            <button type="submit">4,99€</button>
-                        </div> -->
-                    </div>
-                    <div class="meal_container">
-                        <div class="meal_basic">
-                            <h2 class="meal_name">Dinner for 2 Bundle</h2>
-                            <h2 class="meal_price">14.99€</h2>
-                            <div class="meal_img_container">
-                                <img src="img/dinner-for-2-bundle.jpg">
-                            </div>
-                            <button onclick="addToBasket(4)">+</button>
-                            <!-- <button class="d-none">×</button> -->
-                        </div>
-                        <!-- <div class="meal_extra d-none">
-                            <input type="number" name="" id="numberOfMeal">
-                            <button type="submit">4,99€</button>
-                        </div> -->
-                    </div>
-                    <div class="meal_container">
-                        <div class="meal_basic">
-                            <h2 class="meal_name">Breakfirst for 2 Bundle</h2>
-                            <h2 class="meal_price">14.99€</h2>
-                            <div class="meal_img_container">
-                                <img src="https://c.pxhere.com/photos/56/4a/hamburger_burger_fast_food_unhealthy_eat_lunch_meat_fat-1387336.jpg!d">
-                            </div>
-                            <button onclick="addToBasket(5)">+</button>
-                            <!-- <button class="d-none">×</button> -->
-                        </div>
-                        <!-- <div class="meal_extra d-none">
-                            <input type="number" name="" id="numberOfMeal">
-                            <button type="submit">4,99€</button>
-                        </div> -->
-                    </div>
+
+                <nav id="meal_group_nav" class="navbar navbar-light bg-light px-3 sticky-top m-1">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#item-1">Beliebte Gerichte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#item-2">Specials</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            onkeyup="search(this.value)">
+                    </form>
+                </nav>
+
+                <div id="meals" data-bs-offset="0" tabindex="0">
+                    <h4 id="item-1" class="meal_group_name rounded-top">Beliebte Gerichte</h4>
+                    <div id="beliebteGerichte"></div>
+
+                    <h4 id="item-2" class="meal_group_name rounded-top ">Specials</h4>
+                    <div id="specials"></div>
                 </div>
             </div>
+
             <div class="imprint">
-                <h2>Impressum</h2>
+                <h3>Impressum</h3>
                 <pre>
 BURGER QUEEN ® München - Moonstraße
 BURGER QUEEN GmbH
@@ -184,34 +114,20 @@ USt.-IdNr.: DE761324098
         </div>
         <div id="basket_container">
             <button id="closeBasketButton" onclick="closeBasket()">⨉</button>
-            <h2>WARENKORB</h2>
+            <h3>WARENKORB</h3>
             <hr>
             <div id="basketContent">
-                <div id="generateBasketMeals">
-                    <i class="fas fa-shopping-basket" style="font-size:5em;color:lightgray;"></i>
-                    <p>Mach es voll</p>
-                </div>
+                <div id="basketMeals"></div>
                 <hr>
-                <div id="sumCalc">
-                    <div>
-                        <span><b>Zwischensumme</b></span> <span id="sum"><b>0€</b></span>
-                    </div>
-                    <div>
-                        <span>Lieferkosten</span> <span id="deliveryCost">0€</span>
-                    </div>
-                    <div>
-                        <span><b>Gesamt</b></span> <span id="totalSum"><b>0€</b></span>
-                    </div>
-                </div>
+                <div id="sumCalc"></div>
             </div>
             <hr>
             <p id="cantOrderWarning">Leider kannst Du noch nicht bestellen. <br>
                 BURGER QUEEN ® liefert erst ab einem Mindestbestellwert von 14,00 € (exkl. Lieferkosten).</p>
-            <button id="orderButton" class="d-none" type="submit"
-                style="width:90%;height:50px;font-weight:bold;">Bestellen</button>
+            <button id="orderButton" class="d-none btn btn-primary">Bestellen (demo)</button>
         </div>
         <div id="basket_container_bar" onclick="basketFullDisplay()">
-            <h2>WARENKORB</h2> <span id="totalSumExtra"></span>
+            <h3 class="text-white">WARENKORB</h3> <span id="totalSumExtra" class="text-info"></span>
         </div>
     </main>
 
